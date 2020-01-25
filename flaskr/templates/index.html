@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Dynamic Plagiarism Detector
+	</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="../static/styles/styles.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+	<h1>Dynamic Plagiarism Detector</h1>
+	<div class="form-container">
+	<form action = "{{url_for('index')}}" method="post" enctype="multipart/form-data">
+
+
+		<div class="input-group mb-3">
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="inputGroupFile02" name="file1">
+		    <label class="custom-file-label" for="inputGroupFile02">Choose Original File</label>
+		  </div>
+		  
+		</div>
+
+		<div class="input-group mb-3">
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="inputGroupFile02" name="file2">
+		    <label class="custom-file-label" for="inputGroupFile02">Choose Suspected File</label>
+		  </div>
+		  
+		</div>
+
+		<!-- <input class="form-control-file" type="file" name="file1">
+		<input type="file" name="file2"> <br> -->
+		<!-- <input type="submit" value="Upload and Calculate"> -->
+
+		<button type="submit" class="btn btn-primary">Upload and Calculate</button>
+	</form>
+
+
+	<div>{{score}}</div>
+
+	</div>
+
+
+		<script type="text/javascript">
+
+	    $('.custom-file input').change(function (e) {
+	        $(this).next('.custom-file-label').html(e.target.files[0].name);
+	    });
+
+	</script>
+</body>
+
+
+</html>
+
