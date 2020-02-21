@@ -1,9 +1,32 @@
-/*body{
-	text-align: center;
+.main{
+	min-height: 100vh;
+
 }
 
-input{
-	color: white;
-	background-color: blue;
-}*/
+body{
+	padding-top: 72px;
 
+	background-color: 
+}
+
+.mynavbar{
+	/*background-color: #04de63;*/
+
+	background-color: #0acc4e;
+	color: white;
+}
+
+#my-nav-text li a{
+	color: white;
+}
+
+#custom-navbar-text{
+	color: white;
+	font-size: 1.5rem;
+}
+
+#plag-title{
+	color: #0acc4e;
+	
+
+}
